@@ -5,7 +5,7 @@
                 <h3>Upload an Image</h3>
             </div>
             <div class="subsection">
-                <form action="/images" method="post">
+                <form action="/images" method="post" enctype="multipart/form-data">
                     <div>
                         <label for="file">Browse :</label>
                         <input type="file" name="file" id="file" />
@@ -19,13 +19,25 @@
                         <textarea name="description" id="description"></textarea>
                     </div>  
                     <div>
-                         <button type="submit" class="btn-std">Upload Image&nbsp - &nbsp<i class="fa fa-upload" aria-hidden="true"></i></button>
+                         <button type="submit" class="btn-std">Upload Image &nbsp - &nbsp<i class="fa fa-upload" aria-hidden="true"></i></button>
                     </div>
                 </form>
             </div>
         </div>        
     </section>
-
+    
     <section class="newest">
+        <div class="subsection">
+            <h3>Newest Images</h3>
+        </div>
+        <div>
+            {{#each images}}
+                <div>
+                    <a href="/images/{{uniqueId}}">
+                        <img src="/assets/upload/{{filename}}" alt="{{title}}" class="img-thumbnail"/>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
     </section>
 </div>

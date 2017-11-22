@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+body {
     font-family: 'verdana', sans-serif;
     font-size: 20px;
 }
@@ -42,9 +42,16 @@ label {
     margin-top: 15px;
     padding: 5px 10px;
     font-weight: bold;
-    border-radius: 30px;
+    border-radius: 10pxx;
     background-color: #e67e22;
     border: 1px solid #e67e22;
     color: #fff;
 }
 
+/* ---------------------------------------------*/
+/*               PHOTOS                         */
+/* ---------------------------------------------*/
+
+.img-thumbnail {
+    height: 100px;
+}
