@@ -4,9 +4,22 @@
     </section>
     <section class="image">
         <p>{{image.description}}</p>
-        <img src="/assets/upload/{{image.filename}}" alt="Image">
+        <img src="/assets/upload/{{image.filename}}" alt="Image" class="img-medium">
     </section>
     <section class="footer">
-        <button><i class="fa fa-heart">Like</i></button>       
+        <button class="btn-std"><i class="fa fa-heart">&nbsp Like</i></button>       
+    </section>
+    <section class="comments">
+        <div>
+            <button class="btn-std"><i class="fa fa-commenting-o">&nbsp Post Comment</i></button>
+        </div>
+        <div>
+            {{#each comments}}
+                <div>
+                    <p>{{name}}</p>
+                    <p>{{comment}}</p>
+                </div>
+            {{/each}}
+        </div>   
     </section>
 </div>

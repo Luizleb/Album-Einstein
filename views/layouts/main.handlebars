@@ -8,5 +8,19 @@
         
     </head>
     <body>
-        {{{body}}}
+        <header>Header</header>
+        <div class="contents">
+            <section class="main">
+                {{{body}}}
+            </section>
+            <section class="sidebar">
+                <div class="stats">Stats</div>
+                <div class="popular">Popular</div>
+                <div class="lastcomments">
+                    <h3>Comments:</h3>
+                    {{>comments}}
+                </div>
+            </section>
+        </div>
+        <footer>Footer</footer>
     </body>

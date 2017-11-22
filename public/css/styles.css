@@ -55,3 +55,23 @@ label {
 .img-thumbnail {
     height: 100px;
 }
+
+.img-medium {
+    height: 200px;
+}
+
+/* ---------------------------------------------*/
+/*               MAIN                           */
+/* ---------------------------------------------*/
+
+.contents {
+    display: flex;
+}
+
+.main {
+    flex: 3
+}
+
+.sidebar {
+    flex: 1
+}
