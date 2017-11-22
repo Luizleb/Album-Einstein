@@ -1,0 +1,50 @@
+/* ---------------------------------------------*/
+/*               BASIC SETUP                    */
+/* ---------------------------------------------*/
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'verdana', sans-serif;
+    font-size: 20px;
+}
+
+div {
+    margin: 10px 0;
+}
+
+label {
+    font-size: 70%;
+    vertical-align: center;
+}
+
+/* ---------------------------------------------*/
+/*               REUSABLE COMPONENTS            */
+/* ---------------------------------------------*/
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.subsection {
+    margin: 30px 0;
+}
+
+/* ---------------------------------------------*/
+/*               BUTTONS                        */
+/* ---------------------------------------------*/
+
+.btn-std {
+    margin-top: 15px;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
