@@ -7,11 +7,31 @@
         <img src="/assets/upload/{{image.filename}}" alt="Image" class="img-medium">
     </section>
     <section class="footer">
-        <button class="btn-std"><i class="fa fa-heart">&nbsp Like</i></button>       
+        <button class="btn-std" id="btn-like" data-id='{{image.uniqueId}}'><i class="fa fa-heart">&nbsp Like</i></button>       
+        <strong class="likes-count">{{image.likes}}</strong>
     </section>
-    <section class="comments">
+    <section class="comment-add" id="comment-add">
+        <form action="/images/{{image.uniqueId}}/comment" method="post">
+            <div>
+                <label for="name">Name :</label>
+                <input type="text" name="name">
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" name="email">
+            </div>
+            <div>
+                <label for="comment">Comment :</label>
+                <textarea name="comment" rows="2"></textarea>
+            </div>
+            <div>
+            <button class="btn-std"><i class="fa fa-commenting-o">&nbsp Post</i></button>
+        </div>
+        </form>
+    </section>
+    <section class="comments-list">
         <div>
-            <button class="btn-std"><i class="fa fa-commenting-o">&nbsp Post Comment</i></button>
+            <button class="btn-std" id="btn-comment"><i class="fa fa-commenting-o">&nbsp Post Comment</i></button>
         </div>
         <div>
             {{#each comments}}

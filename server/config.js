@@ -4,6 +4,7 @@ var exphbs = require('express-handlebars');
 var express = require('express');
 var bodyParser = require('body-parser');
 var multer = require('multer');
+var moment = require('moment');
 
 module.exports = function(app) {
     app.use(bodyParser.urlencoded({'extended': true}));
@@ -17,6 +18,11 @@ module.exports = function(app) {
     // sets the handlebars engine
     app.engine('handlebars', exphbs.create({
         defaultLayout: 'main',
+        helpers: {
+            timeago: function(timestamp) {
+                return moment(timestamp).startOf('minute').fromNow();
+            }
+        }
     }).engine);
     app.set('view engine', 'handlebars');
 };

@@ -1,3 +1,5 @@
+var sidebar = require('../helpers/sidebar');
+
 var model = {
     images: [
         {
@@ -25,13 +27,14 @@ var model = {
             likes:          0,
             timestamp:      Date.now()
         }
-
     ]
 };
 
 module.exports = {
     index: function(req, res){
-        res.render('index', model);
+        sidebar(model, function(model){
+            res.render('index', model);
+        });
     }
 };
 

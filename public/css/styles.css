@@ -48,6 +48,10 @@ label {
     color: #fff;
 }
 
+.btn-std :hover {
+    cursor: pointer;
+}
+
 /* ---------------------------------------------*/
 /*               PHOTOS                         */
 /* ---------------------------------------------*/
@@ -66,6 +70,7 @@ label {
 
 .contents {
     display: flex;
+    justify-content: center;
 }
 
 .main {

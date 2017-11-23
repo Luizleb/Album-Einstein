@@ -1,5 +1,6 @@
 var fs = require("fs");
 var path = require("path");
+var sidebar = require('../helpers/sidebar');
 
 var model = {
     image: {
@@ -54,7 +55,12 @@ module.exports = {
         }  
     },
     detail: function(req, res) {
-        res.render('image', model);
+        sidebar(model, function(model){
+            res.render('image', model);
+        });
+    },
+    like: function(req, res) {
+        res.json({likes:1});
     }
 }
 
