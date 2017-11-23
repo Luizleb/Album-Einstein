@@ -1,7 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 var sidebar = require('../helpers/sidebar');
-var Model = require('../models/image');
+var Model = require('../models');
 
 var model = {
     image: {}, 
@@ -39,7 +39,7 @@ module.exports = {
         saveImage();      
     },
     detail: function(req, res) {
-        Model.findOne({filename: {$regex: req.params.id}}, function(err, image) {
+        Model.Image.findOne({filename: {$regex: req.params.id}}, function(err, image) {
             if(err) throw err;
             if(image) {
                 image.views += 1;
@@ -53,7 +53,19 @@ module.exports = {
         });
     },
     like: function(req, res) {
-        res.json({likes:1});
+        Model.Image.findOne({filename: {$regex: req.params.id}}, function(err, image){
+            if(err) throw err;
+            if(image) {
+                image.likes += 1;
+                image.save(function(err){
+                    if(err) {
+                        res.json(err);
+                    } else {
+                        res.json({likes: image.likes});
+                    }
+                });
+            }
+        });
     }
 }
 

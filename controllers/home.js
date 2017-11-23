@@ -1,5 +1,5 @@
 var sidebar = require('../helpers/sidebar');
-var imageModel = require('../models/image');
+var imageModel = require('../models').Image;
 
 var model = {
     images: []

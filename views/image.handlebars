@@ -7,8 +7,10 @@
         <img src="/assets/upload/{{image.filename}}" alt="Image" class="img-medium">
     </section>
     <section class="footer">
-        <button class="btn-std" id="btn-like" data-id='{{image.uniqueId}}'><i class="fa fa-heart">&nbsp Like</i></button>       
-        <strong class="likes-count">{{image.likes}}</strong>
+        <button class="btn-std" id="btn-like" data-id='{{image.uniqueId}}'>
+            <i class="fa fa-heart">&nbsp Like</i></button>       
+            <strong class="likes-count">{{image.likes}}</strong></button>
+            &nbsp - &nbsp<i class="fa fa-eye">&nbsp</i>{{image.views}}
     </section>
     <section class="comment-add" id="comment-add">
         <form action="/images/{{image.uniqueId}}/comment" method="post">

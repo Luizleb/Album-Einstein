@@ -11,4 +11,4 @@ var commentSchema = new Schema({
     timestamp:      {type: Date, 'default':Date.now}
 });
 
-module.exports = mongoose.model('Image', imageSchema);
+module.exports = mongoose.model('Comment', commentSchema);
