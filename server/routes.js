@@ -7,6 +7,7 @@ module.exports = function(app){
     router.get('/', home.index);
     router.get('/images/:id', image.detail);
     router.post('/images/:id/like', image.like);
+    router.post('/images/:id/comment', image.comment);
     router.post('/images', image.index);
     app.use(router);
 };
