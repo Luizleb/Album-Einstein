@@ -1,8 +1,9 @@
 <div>
     {{#each sidebar.popular}}
         <div>
-            <p>{{title}}</p>
-            <p>{{description}}</p>
+            <a href="/images/{{uniqueId}}">
+                <img src="/assets/upload/{{filename}}" alt="{{title}}" class="img-mini"/>
+            </a>
         </div>
     {{/each}}
 </div> 

@@ -6,10 +6,10 @@ var async = require('async');
 module.exports = function(viewModel, callback) {
     async.parallel([
         function(next){
-            next(null, Stats());
+            Stats(next);
         },
         function(next) {
-            next(null, Images.popular());
+           Images.popular(next);
         },
         function(next) {
             Comments.newest(next);

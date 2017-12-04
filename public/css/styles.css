@@ -12,40 +12,57 @@ body {
     font-size: 20px;
 }
 
-div {
-    margin: 10px 0;
-}
-
-label {
-    font-size: 70%;
-    vertical-align: center;
+html, body {
+    height: 100%;
 }
 
 /* ---------------------------------------------*/
 /*               REUSABLE COMPONENTS            */
 /* ---------------------------------------------*/
 
-.container {
-    max-width: 1140px;
+.container, .sidebar {
+    max-width: 95%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .subsection {
-    margin: 30px 0;
+    margin: 10px 0 30px 0;
+    font-size: 80%;
+    vertical-align: center;
 }
 
+.input {
+    margin-top: 20px;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-title {
+    margin-bottom: 15px;
+}
+
+.title {
+    background-color: rgb(243, 243, 243);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
 /* ---------------------------------------------*/
 /*               BUTTONS                        */
 /* ---------------------------------------------*/
 
 .btn-std {
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 5px 10px;
     font-weight: bold;
     border-radius: 10pxx;
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
+    background-color: #3498db;
+    border: 1px solid #2980b9;
     color: #fff;
+
 }
 
 .btn-std :hover {
@@ -64,13 +81,22 @@ label {
     height: 200px;
 }
 
+.img-mini {
+    height: 60px;
+}
+
 /* ---------------------------------------------*/
 /*               MAIN                           */
 /* ---------------------------------------------*/
+header {
+    margin: 15px 0;
+    border-bottom: 1px lightgreen solid;
+    height: 5vh;
+}
 
 .contents {
     display: flex;
-    justify-content: center;
+    height:90vh;
 }
 
 .main {
@@ -79,4 +105,32 @@ label {
 
 .sidebar {
     flex: 1
+}
+
+.stats, .popular, .lastcomments {
+    margin-bottom: 20px;
+    font-size: 80%;
+}
+
+.lastcomments div {
+    text-align: left;
+    margin-left: 5px;
+    list-style: none;
+}
+
+.popular div {
+    display:flex;
+    justify-content: space-around;
+}
+
+footer {
+    margin: 10px 0;
+    border-top: 1px lightgreen solid;
+    height: 5vh;
+    text-align: center;
+}
+
+small {
+    font-size: 70%;
+    color: rgb(177, 177, 177);
 }

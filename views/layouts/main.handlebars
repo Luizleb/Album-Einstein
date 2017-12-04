@@ -8,27 +8,29 @@
         
     </head>
     <body>
-        <header>Header</header>
+        <header>
+            <h2 class="main-title">Álbum Einstein</h2>
+        </header>
         <div class="contents">
             <section class="main">
                 {{{body}}}
             </section>
-            <section class="sidebar">
+            <section class="subsection sidebar">
                 <div class="stats">
-                    <h3>Stats:</h3>
+                    <h3 class="title">Estatísticas :</h3>
                     {{> stats}}
                 </div>
                 <div class="popular">
-                    <h3>Popular:</h3>
+                    <h3 class="title">Mais visitas :</h3>
                     {{> popular}}
                 </div>
                 <div class="lastcomments">
-                    <h3>Comments:</h3>
+                    <h3 class="title">Comentários :</h3>
                     {{> comments}}
                 </div>
             </section>
         </div>
-        <footer>Footer</footer>
+        <footer><small>Copyright &copy Leb - 2017</small></footer>
         <script src="/assets/vendor/jquery-3.2.1.min.js"></script>
         <script src="/assets/js/scripts.js"></script>
     </body>

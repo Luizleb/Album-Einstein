@@ -2,24 +2,23 @@
     <section class="upload">
         <div>
             <div class="subsection">
-                <h3>Upload an Image</h3>
+                <h3 class="title">Faça o upload</h3>
             </div>
             <div class="subsection">
                 <form action="/images" method="post" enctype="multipart/form-data">
-                    <div>
-                        <label for="file">Browse :</label>
+                    <div class="input">
                         <input type="file" name="file" id="file" />
                     </div>
-                    <div>
-                        <label for="file">Title :</label>
+                    <div class="input">
+                        <label for="file">Título :</label>
                         <input type="text" name="title" id="title" />
                     </div>
-                    <div>
-                        <label for="file">Description :</label>
+                    <div class="input">
+                        <label for="file">Descrição :</label>
                         <textarea name="description" id="description"></textarea>
                     </div>  
                     <div>
-                         <button type="submit" class="btn-std">Upload Image &nbsp - &nbsp<i class="fa fa-upload" aria-hidden="true"></i></button>
+                         <button type="submit" class="btn-std">Upload&nbsp - &nbsp<i class="fa fa-upload" aria-hidden="true"></i></button>
                     </div>
                 </form>
             </div>
@@ -28,9 +27,9 @@
     
     <section class="newest">
         <div class="subsection">
-            <h3>Newest Images</h3>
+            <h3 class="title">Imagens recentes</h3>
         </div>
-        <div>
+        <div class="images">
             {{#each images}}
                 <div>
                     <a href="/images/{{uniqueId}}">
